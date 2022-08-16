@@ -1,4 +1,5 @@
 #!/bin/sh
+<<<<<<< HEAD
 read -p "Enter mySQL Password: " x
 echo "Welcome ${x}!"
 sudo apt -y remove nodejs
@@ -35,11 +36,21 @@ sudo systemctl start docker
 
 sudo ansible-playbook install_afyastats.yml
 
+=======
+
+sudo apt update
+sudo apt install ansible
+sudo ansible-playbook install_afyastat.yml
+>>>>>>> 4a4810867cd74e54ca0954f47810c8178f33bfde
 #################Update openmrs global_property ###########################################################################################################
 
 # MySQL settings
 mysql_user="root"
+<<<<<<< HEAD
 mysql_password=${x}
+=======
+mysql_password="test12"
+>>>>>>> 4a4810867cd74e54ca0954f47810c8178f33bfde
 mysql_base_database="openmrs"
 mysql_information_schema_database="information_schema"
 echo "Updating openmrs global_properties"
